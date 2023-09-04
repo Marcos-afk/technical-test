@@ -10,12 +10,12 @@ export const GlobalStyle = createGlobalStyle`
   body {
     -webkit-font-smoothing: 'antialiased';
     background-Color: ${({ theme }) => theme.colors.white};
-    color: ${({ theme }) => theme.colors.gray900};
+    color: ${({ theme }) => theme.colors.black};
   }
 
   body, input, textarea, button {
-    font-family: 'Roboto';
-    font-weight: 500,
+    font-family: 'Inter' sans-serif;
+    font-weight: 400,
   }
 
   @media (max-width: 768px) {
