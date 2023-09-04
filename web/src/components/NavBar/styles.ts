@@ -4,7 +4,7 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid ${({ theme }) => theme.colors.gray500};
+  border: 1px solid ${({ theme }) => theme.colors.gray100};
   padding: 1.25rem 6.5rem;
 
 

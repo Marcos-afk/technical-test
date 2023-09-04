@@ -10,7 +10,9 @@ import * as S from './styles';
 export function NavBar() {
   return (
     <S.Container>
-      <Image src={AppLogo} alt="" />
+      <Link href="/">
+        <Image src={AppLogo} alt="" />
+      </Link>
       <S.Actions>
         <Link href="#">
           <ShoppingBag width={14} height={14} />

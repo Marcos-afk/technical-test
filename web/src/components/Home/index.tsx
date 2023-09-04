@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { HomeProps } from './HomeProps';
 import * as S from './styles';
 
-export function Home({ data }: HomeProps) {
+export function HomePage({ data }: HomeProps) {
   return (
     <S.Container>
       <S.Hero>

@@ -1,4 +1,5 @@
 import { NavBar } from '@components/NavBar';
+import { CartProvider } from '@contexts/cart';
 import { StyledComponentsProvider } from '@libs/styled-components/Provider';
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
@@ -26,15 +27,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
-      <body className={`${inter.className} ${poppins.className}`}>
-        <StyledComponentsRegistry>
-          <StyledComponentsProvider>
-            <NavBar />
-            {children}
-          </StyledComponentsProvider>
-        </StyledComponentsRegistry>
-      </body>
-    </html>
+    <CartProvider>
+      <html lang="pt-BR">
+        <body className={`${inter.className} ${poppins.className}`}>
+          <StyledComponentsRegistry>
+            <StyledComponentsProvider>
+              <NavBar />
+              {children}
+            </StyledComponentsProvider>
+          </StyledComponentsRegistry>
+        </body>
+      </html>
+    </CartProvider>
   );
 }

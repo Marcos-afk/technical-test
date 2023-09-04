@@ -1,7 +1,6 @@
-import Link from 'next/link';
 import { styled } from 'styled-components';
 
-export const Container = styled(Link)`
+export const Container = styled.div`
   max-width: 309px;
   max-height: 658px;
   text-decoration: none;
@@ -12,11 +11,11 @@ export const Container = styled(Link)`
   align-items: center;
   gap: 1.5rem;
 
-  img {
-    width: 100%; 
-    max-height: 100%;
-    object-fit: fill;
-    border-radius: 8px;
+  a {
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
 
     transition: filter 0.2s;
     &:hover {
