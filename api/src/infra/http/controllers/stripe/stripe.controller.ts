@@ -6,8 +6,16 @@ import {
   Param,
   Post,
   Res,
+  UseGuards,
 } from '@nestjs/common';
-import { ApiOperation, ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { AuthGuard } from '@nestjs/passport';
+import {
+  ApiBearerAuth,
+  ApiOperation,
+  ApiParam,
+  ApiResponse,
+  ApiTags,
+} from '@nestjs/swagger';
 
 import { CheckoutDTO } from '@infra/stripe/dtos/checkout.dto';
 import { StripeService } from '@infra/stripe/stripe.service';
@@ -68,6 +76,8 @@ export class StripeController {
     });
   }
 
+  @UseGuards(AuthGuard('jwt'))
+  @ApiBearerAuth()
   @ApiOperation({
     description: 'Iniciar checkout gerando um link de pagamento',
   })

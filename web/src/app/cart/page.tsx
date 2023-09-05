@@ -53,7 +53,7 @@ export default function Cart() {
         error instanceof AxiosError
           ? error.response?.data.message
           : 'Erro, tente novamente mais tarde';
-      alert(`Erro ao realizar requisição: ${message}`);
+      alert(message);
     }
   };
 
