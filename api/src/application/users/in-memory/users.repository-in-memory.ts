@@ -15,6 +15,11 @@ export class UsersRepositoryInMemory implements UsersRepositoryProps {
     return user ? user : null;
   }
 
+  async findUserById(id: string): Promise<UserEntity | null> {
+    const user = this.users.find((u) => u.id === id);
+    return user ? user : null;
+  }
+
   async signUp({
     name,
     email,

@@ -22,6 +22,10 @@ export class TypeormUsersRepository implements UsersRepositoryProps {
     return await this.usersRepository.findOne({ where: { cell_phone } });
   }
 
+  async findUserById(id: string): Promise<UserEntity | null> {
+    return await this.usersRepository.findOne({ where: { id } });
+  }
+
   async signUp({
     name,
     email,
