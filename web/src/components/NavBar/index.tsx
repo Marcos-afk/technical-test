@@ -14,7 +14,7 @@ export function NavBar() {
         <Image src={AppLogo} alt="" />
       </Link>
       <S.Actions>
-        <Link href="#">
+        <Link href="/cart">
           <ShoppingBag width={14} height={14} />
           <span>Carrinho</span>
         </Link>

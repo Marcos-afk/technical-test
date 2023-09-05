@@ -37,6 +37,7 @@ export const Details = styled.div`
   gap: 2.5rem;
 
   button {
+    cursor: pointer;
     display: flex;
     padding: 0.75rem 1rem;
     justify-content: center;

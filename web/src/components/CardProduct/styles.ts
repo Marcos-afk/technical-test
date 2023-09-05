@@ -25,6 +25,7 @@ export const Container = styled.div`
   }
 
   button {
+    cursor: pointer;
     border: none;
     display: flex;
     padding: 0.75rem 2rem;

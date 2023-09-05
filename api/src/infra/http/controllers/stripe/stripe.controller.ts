@@ -1,9 +1,19 @@
-import { Controller, Get, HttpStatus, Param, Res } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpStatus,
+  Param,
+  Post,
+  Res,
+} from '@nestjs/common';
 import { ApiOperation, ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
 
+import { CheckoutDTO } from '@infra/stripe/dtos/checkout.dto';
 import { StripeService } from '@infra/stripe/stripe.service';
 
 import {
+  CheckoutResponse,
   FindProductByIdResponse,
   FindProductsResponse,
 } from './types/response.props';
@@ -55,6 +65,24 @@ export class StripeController {
     return res.status(HttpStatus.OK).json({
       message: 'Produto encontrado!',
       product,
+    });
+  }
+
+  @ApiOperation({
+    description: 'Iniciar checkout gerando um link de pagamento',
+  })
+  @ApiResponse({
+    description: 'OK',
+    status: HttpStatus.OK,
+    type: CheckoutResponse,
+  })
+  @Post('checkout')
+  async checkout(@Body() checkoutDTO: CheckoutDTO, @Res() res: Response) {
+    const url = await this.stripeService.checkout(checkoutDTO);
+
+    return res.status(HttpStatus.OK).json({
+      message: 'Url de pagamento gerada com sucesso!',
+      url,
     });
   }
 }
