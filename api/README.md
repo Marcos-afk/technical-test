@@ -6,7 +6,7 @@
 
 - [x] Aplicação de conceitos da arquitetura limpa
 - [x] Desacoplamento de camadas application e infra
-- [x] Aplicação dos patterns de repositórios em memória, dessa forma a aplicação não necessita de um banco de dados para funcionar
+- [x] Aplicação do pattern de repositórios em memória, dessa forma a aplicação não necessita de um banco de dados para funcionar
 - [x] Aplicação dos conceitos S.O.L.I.D
 - [x] Aplicação de Patterns, principalmente Adpater na camada de Providers e Data Mapper na geração de novas instancias das entidades
 - [x] Integração com o getaway de pagamento Stripe
