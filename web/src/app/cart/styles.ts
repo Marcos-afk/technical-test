@@ -165,8 +165,14 @@ export const PaymentDetails = styled.div`
     border-radius: 4px;
     transition: filter 0.2s;
 
-    &:hover {
+    &:not(:disabled):hover {
+      cursor: pointer;
       filter: brightness(0.8);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
     }
 
     @media (max-width: 1285px) {

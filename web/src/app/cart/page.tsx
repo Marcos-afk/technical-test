@@ -1,6 +1,7 @@
 'use client';
 
 import { useCart } from '@hooks/cart';
+import { useToken } from '@hooks/token';
 import { formatNumberIntoMonetaryValue } from '@utils/formatNumber';
 import axios, { AxiosError } from 'axios';
 import { Minus, Plus, Trash } from 'lucide-react';
@@ -10,6 +11,7 @@ import * as S from './styles';
 
 export default function Cart() {
   const { cart, removeItemToCart, updateItemToCart } = useCart();
+  const { token } = useToken();
 
   const handleIncrementProduct = (productId: string, quantity: number) => {
     updateItemToCart(productId, quantity + 1);
@@ -44,6 +46,11 @@ export default function Cart() {
         `${process.env.NEXT_PUBLIC_API_BASE_URL}/stripe/checkout`,
         {
           lineItems,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
       );
 
@@ -122,7 +129,9 @@ export default function Cart() {
             </S.MonetaryValue>
           </div>
         </S.MonetaryValues>
-        <button onClick={handleMakePurchase}>Finalizar pedido</button>
+        <button onClick={handleMakePurchase} disabled={!token}>
+          Finalizar pedido
+        </button>
       </S.PaymentDetails>
     </S.Container>
   );

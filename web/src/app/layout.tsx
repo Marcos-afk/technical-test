@@ -1,5 +1,6 @@
 import { NavBar } from '@components/NavBar';
 import { CartProvider } from '@contexts/cart';
+import { TokenProvider } from '@contexts/token';
 import { StyledComponentsProvider } from '@libs/styled-components/Provider';
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
@@ -28,16 +29,18 @@ export default function RootLayout({
 }) {
   return (
     <CartProvider>
-      <html lang="pt-BR">
-        <body className={`${inter.className} ${poppins.className}`}>
-          <StyledComponentsRegistry>
-            <StyledComponentsProvider>
-              <NavBar />
-              {children}
-            </StyledComponentsProvider>
-          </StyledComponentsRegistry>
-        </body>
-      </html>
+      <TokenProvider>
+        <html lang="pt-BR">
+          <body className={`${inter.className} ${poppins.className}`}>
+            <StyledComponentsRegistry>
+              <StyledComponentsProvider>
+                <NavBar />
+                {children}
+              </StyledComponentsProvider>
+            </StyledComponentsRegistry>
+          </body>
+        </html>
+      </TokenProvider>
     </CartProvider>
   );
 }
