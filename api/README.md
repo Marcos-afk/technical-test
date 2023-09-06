@@ -8,7 +8,7 @@
 - [x] Desacoplamento de camadas application e infra
 - [x] Aplicação do pattern de repositórios em memória, dessa forma a aplicação não necessita de um banco de dados para funcionar
 - [x] Aplicação dos conceitos S.O.L.I.D
-- [x] Aplicação de patterns, principalmente Adpater na camada de Providers e Data Mapper na geração de novas instancias das entidades
+- [x] Aplicação de patterns, principalmente Adpater na camada de Providers e Data Mapper na geração de novas instâncias das entidades
 - [x] Integração com o getaway de pagamento Stripe
 
 ## :memo: Documentação
@@ -16,7 +16,7 @@
 Documentação feita com Swagger. Mapeamento de dados de entrada e saída com exemplos.
 
 <div align="center">
-	<img src="./src/assets/doc-gif.gif" width="800"alt="doc-gif"/>
+	<img src="./src/assets/doc-gif.gif" width="500"alt="doc-gif"/>
 </div>
 
 ## :rocket: Testes
@@ -24,7 +24,7 @@ Documentação feita com Swagger. Mapeamento de dados de entrada e saída com ex
 Testes realizados com Jest, mapeando todos os casos de uso da camada application da aplicação.
 
 <div align="center">
-	<img src="./src/assets/tests-gif.gif" width="800"alt="tests-gif"/>
+	<img src="./src/assets/tests-gif.gif" width="500"alt="tests-gif"/>
 </div>
 
 ## :hammer_and_wrench: Ferramentas
