@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Technical Test
 
-## Getting Started
+## :dart: Objetivo
 
-First, run the development server:
+### Aplicação web desenvolvida para teste técnico de vaga para desenvolvedor fullstack. Principais características:
+
+- [x] Uso do Styled-Components com novas propriedades e configurações do Next 13
+- [x] Uso da feature de componentes assíncronos do Next 13
+- [x] Integração com o Stripe para realização de pagamentos
+- [x] Uso de contextos, dtos, hooks personalizados e componentização
+- [x] Validação de formulários com react-hook
+- [x] Pequenos ajustes no design para se encaixar ao uso do Stripe
+- [x] Projeto no ponto de ser usado como protótipo
+
+## :rocket: Exemplo de funcionalidade do Stripe
+
+<div align="center">
+	<img src="./src/assets/stripe.gif" width="800"alt="doc-gif"/>
+</div>
+
+## :hammer_and_wrench: Ferramentas
+
+- [@radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog)
+- [axios](https://www.npmjs.com/package/axios)
+- [immer](https://www.npmjs.com/package/immer)
+- [js-cookie](https://www.npmjs.com/package/js-cookie)
+- [lucide-react](https://www.npmjs.com/package/lucide-react)
+- [react-hook-form](https://www.npmjs.com/package/react-hook-form)
+- [styled-components](https://www.npmjs.com/package/styled-components)
+- [zod](https://www.npmjs.com/package/zod)
+
+## :desktop_computer: Padronização de código
+
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+
+## :rocket: Executando o projeto
 
 ```bash
+// Instale as dependências
+
+npm i
+
+// Executando aplicação
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
