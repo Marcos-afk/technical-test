@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { styled } from 'styled-components';
 
 export const Container = styled.main`
@@ -223,4 +224,16 @@ export const MonetaryValue = styled(BaseMonetaryValueLabel)`
 export const FreeShippingValue = styled(BaseMonetaryValueLabel)`
   color: ${({ theme }) => theme.colors.green100};
   font-weight: 500;
+`;
+
+export const EmptyCart = styled(Link)`
+  text-decoration: underline;
+  text-align: center;
+  color: ${({ theme }) => theme.colors.gray500};
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+
 `;
